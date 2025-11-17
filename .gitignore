@@ -1,2 +1,7 @@
-.env
-target/
+/bin/
+
+.classpath
+*.project
+.idea
+/out/
+src/META-INF/MANIFEST.MF
