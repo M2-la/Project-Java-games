@@ -2,12 +2,11 @@ package manager;
 
 public enum GameStatus {
     GAME_OVER,
-    PAUSE_RESUME,
+    PAUSED,
     RUNNING,
     START_SCREEN,
     MAP_SELECTION,
-    MISSSION_PASSED,
     HELP_SCREEN,
+    MISSION_PASSED,
     ABOUT_SCREEN
-    
 }

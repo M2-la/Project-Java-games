@@ -41,4 +41,3 @@ public class SurpriseBrick extends Brick{
         return prize;
     }
 }
-
