@@ -1,6 +1,7 @@
 package manager;
 
 public class Camera {
+
     private double x, y;
     private int frameNumber;
     private boolean shaking;
@@ -11,19 +12,29 @@ public class Camera {
         this.frameNumber = 25;
         this.shaking = false;
     }
-    public double getx(){
-        return this.x;
+
+    public double getX() {
+        return x;
     }
-    public void setX(double x){
+
+    public void setX(double x) {
         this.x = x;
     }
-    public double gety(){
-        return this.y;
+
+    public double getY() {
+        return y;
     }
-    public void setY(double y){
+
+    public void setY(double y) {
         this.y = y;
     }
-   public void moveCam(double xAmount, double yAmount){
+
+    public void shakeCamera() {
+        shaking = true;
+        frameNumber = 60;
+    }
+
+    public void moveCam(double xAmount, double yAmount){
         if(shaking && frameNumber > 0){
             int direction = (frameNumber%2 == 0)? 1 : -1;
             x = x + 4 * direction;
@@ -37,5 +48,4 @@ public class Camera {
         if(frameNumber < 0)
             shaking = false;
     }
-
 }

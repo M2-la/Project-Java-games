@@ -17,4 +17,3 @@ public interface Prize {
     void onTouch(Mario mario, GameEngine engine);
 
 }
-
