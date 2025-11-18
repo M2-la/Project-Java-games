@@ -121,7 +121,7 @@ class MapCreator {
             System.out.println("Mario créé à la position par défaut (100, 400)");
         }
 
-        // Fallback: Si la fin de niveau n'a pas été trouvée, la créer à droite de la carte
+        // Fallback: Si la fin de niveau n'a pas été trouvée, la créer à droite de la cartes
         if (createdMap.getEndPoint() == null) {
             EndFlag endPoint = new EndFlag(mapImage.getWidth() * 48 - 100, 400, endFlag);
             createdMap.setEndPoint(endPoint);
