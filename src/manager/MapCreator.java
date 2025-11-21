@@ -59,15 +59,14 @@ class MapCreator {
 
         int pixelMultiplier = 48;
 
-        // Couleurs adaptées aux cartes actuelles
-        int mario = new Color(0, 0, 0).getRGB();              // Noir - position de Mario
-        int ordinaryBrick = new Color(252, 188, 176).getRGB(); // Beige - briques ordinaires
-        int surpriseBrick = new Color(252, 252, 252).getRGB(); // Blanc - briques surprises
-        int groundBrick = new Color(200, 76, 12).getRGB();     // Rouge-brun - sol
-        int pipe = new Color(0, 168, 0).getRGB();              // Vert foncé - tuyaux
-        int goomba = new Color(128, 208, 16).getRGB();         // Vert clair - Goombas
-        int koopa = new Color(60, 188, 252).getRGB();          // Bleu clair - Koopa Troopa
-        int end = new Color(0, 126, 0).getRGB();               // Vert très foncé - fin de niveau
+        int mario = new Color(160, 160, 160).getRGB();
+        int ordinaryBrick = new Color(0, 0, 255).getRGB();
+        int surpriseBrick = new Color(255, 255, 0).getRGB();
+        int groundBrick = new Color(255, 0, 0).getRGB();
+        int pipe = new Color(0, 255, 0).getRGB();
+        int goomba = new Color(0, 255, 255).getRGB();
+        int koopa = new Color(255, 0, 255).getRGB();
+        int end = new Color(160, 0, 160).getRGB();
 
         for (int x = 0; x < mapImage.getWidth(); x++) {
             for (int y = 0; y < mapImage.getHeight(); y++) {
@@ -112,20 +111,6 @@ class MapCreator {
                     createdMap.setEndPoint(endPoint);
                 }
             }
-        }
-
-        // Fallback: Si Mario n'a pas été trouvé dans l'image, le créer à une position par défaut
-        if (createdMap.getMario() == null) {
-            Mario marioObject = new Mario(100, 400); // Position par défaut
-            createdMap.setMario(marioObject);
-            System.out.println("Mario créé à la position par défaut (100, 400)");
-        }
-
-        // Fallback: Si la fin de niveau n'a pas été trouvée, la créer à droite de la cartes
-        if (createdMap.getEndPoint() == null) {
-            EndFlag endPoint = new EndFlag(mapImage.getWidth() * 48 - 100, 400, endFlag);
-            createdMap.setEndPoint(endPoint);
-            System.out.println("Point de fin créé à la position par défaut");
         }
 
         System.out.println("Map is created..");
