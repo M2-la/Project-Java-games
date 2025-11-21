@@ -112,7 +112,7 @@ public class UIManager extends JPanel{
     }
 
     private void drawAboutScreen(Graphics2D g2) {
-        g2.drawImage(aboutScreenImage, 0, 0, null);
+        g2.drawImage(aboutScreenImage, 0, 0, getWidth(), getHeight(), null);
     }
 
     private void drawGameOverScreen(Graphics2D g2) {
